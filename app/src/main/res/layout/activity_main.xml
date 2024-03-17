@@ -3,36 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivRock"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivScissor"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rock" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivPaper"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivScissor"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/ivScissor"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivPaper"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivRock"
+        app:srcCompat="@drawable/scissor" />
+
+    <ImageView
+        android:id="@+id/ivLawan"
         android:layout_width="128dp"
         android:layout_height="128dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/paper" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        android:id="@+id/ivBattleLawan"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivBattlePlayer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLawan"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/ivBattlePlayer"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivRock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBattleLawan"
         app:srcCompat="@drawable/scissor" />
 </androidx.constraintlayout.widget.ConstraintLayout>
